@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haul Alot Logistics Namibia | The Best Freight & Logistics Windhoek</title>
+    <title>Haul Alot Logistics Namibia | Top-Rated Freight & Logistics Windhoek</title>
     
     <!-- FONTS: Montserrat for Headings, Inter for Body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +28,7 @@
             --max-width: 1140px;          /* Pillar 1: Grid */
             --section-padding: 140px;     /* Pillar 2: White Space */
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --soft-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
         /* RESET & BASE */
@@ -236,6 +237,58 @@
 
         .service-card h3 { margin-bottom: 15px; }
 
+        /* QUOTE FORM SECTION */
+        .quote-form-section {
+            background-color: var(--canvas-white);
+        }
+
+        .quote-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px -12px rgba(0,0,0,0.1);
+            border: 1px solid #f0f0f0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--logistics-charcoal);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--haul-alot-red);
+            box-shadow: 0 0 0 3px rgba(230, 55, 49, 0.1);
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
         /* LOCATIONS SECTION */
         .locations { background-color: var(--logistics-charcoal); color: white; }
         .locations h2, .locations h3 { color: white; }
@@ -297,6 +350,9 @@
             .services-grid, .reviews-grid { grid-template-columns: 1fr; }
             .hero h1 { font-size: 34px; }
             .footer-grid { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+            .quote-container { padding: 30px; }
         }
     </style>
 </head>
@@ -318,7 +374,7 @@
             </div>
 
             <div class="nav-btn-wrap">
-                <a href="#contact" class="btn btn-primary" style="padding: 12px 24px; font-size: 13px;">Free Quote</a>
+                <a href="#quote-form" class="btn btn-primary" style="padding: 12px 24px; font-size: 13px;">Free Quote</a>
             </div>
 
             <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
@@ -334,7 +390,7 @@
                 <p>Registered, insured, and trusted by businesses across Namibia. From Walvis Bay to Windhoek, we deliver your cargo on time, every time.</p>
                 
                 <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">Get A Free Hauling Quote →</a>
+                    <a href="#quote-form" class="btn btn-primary">Get A Free Hauling Quote →</a>
                 </div>
 
                 <div class="trust-badges">
@@ -420,7 +476,61 @@
                 <h2 style="margin-bottom: 15px;">Reliable. Insured. Professional.</h2>
                 <p>Don't risk your cargo with unverified movers. Partner with Namibia's trusted logistics experts.</p>
             </div>
-            <a href="#contact" class="btn btn-primary">Start Your Booking →</a>
+            <a href="#quote-form" class="btn btn-primary">Start Your Booking →</a>
+        </div>
+    </section>
+
+    <!-- GET A QUOTE FORM SECTION -->
+    <section id="quote-form" class="section-padding quote-form-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span class="seo-tag">Request a Free Hauling Quote</span>
+                <h2 style="font-size: 36px;">Precision Pricing for Your Cargo</h2>
+                <p>Fill out the form below and our logistics managers will get back to you with a competitive rate.</p>
+            </div>
+
+            <div class="quote-container">
+                <form action="#">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="john@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+264..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service-type">Service Required</label>
+                            <select id="service-type">
+                                <option value="freight">Freight & Long-Haul</option>
+                                <option value="customs">Customs Clearing</option>
+                                <option value="removals">Local Removals</option>
+                                <option value="warehousing">Warehousing</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pickup">Pickup Location</label>
+                            <input type="text" id="pickup" placeholder="City, Area" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery">Delivery Location</label>
+                            <input type="text" id="delivery" placeholder="City, Area" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="cargo-details">Cargo Details / Requirements</label>
+                            <textarea id="cargo-details" rows="4" placeholder="Describe the weight, dimensions, and nature of your cargo..."></textarea>
+                        </div>
+                        <div class="form-group full-width" style="margin-top: 20px;">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Quote Request</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -490,7 +600,7 @@
             
             <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
                 <a href="tel:+264816024863" class="btn btn-primary" style="background: var(--logistics-charcoal);"><i class="fas fa-phone" style="margin-right: 10px;"></i> Call Us Now</a>
-                <a href="mailto:info@haulalot.com" class="btn btn-primary"><i class="fas fa-envelope" style="margin-right: 10px;"></i> Email For Quote</a>
+                <a href="#quote-form" class="btn btn-primary"><i class="fas fa-envelope" style="margin-right: 10px;"></i> Request Quote</a>
             </div>
         </div>
     </section>
@@ -510,7 +620,7 @@
                         <li><a href="#services">Freight Services</a></li>
                         <li><a href="#services">Customs Clearing</a></li>
                         <li><a href="#about">About Our Company</a></li>
-                        <li><a href="#contact">Get a Quote</a></li>
+                        <li><a href="#quote-form">Get a Quote</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -532,7 +642,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2026 Haul-A-Lot Logistics CC. All Rights Reserved. 
+                &copy; 2026 Haul-A-Lot Logistics CC. All Rights Reserved.
             </div>
         </div>
     </footer>
