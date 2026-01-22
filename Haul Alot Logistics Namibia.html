@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haul Alot Logistics Namibia | The Best Freight & Logistics Windhoek</title>
+    
+    <!-- FONTS: Montserrat for Headings, Inter for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FONT AWESOME FOR ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* VISUAL IDENTITY: THE PRECISION NAVIGATOR
+           Strategy: Industrial Strength meets Fintech Precision
+        */
+        :root {
+            --canvas-white: #FFFFFF;
+            --haul-alot-red: #E63731;     /* Primary Action Color */
+            --deep-vector-red: #BA2E28;   /* Hover State */
+            --logistics-charcoal: #231F20; /* Primary Headings & Anchor */
+            --roadway-grey: #F4F4F4;      /* Neutral Support */
+            --text-main: #333333;
+            
+            --max-width: 1140px;          /* Pillar 1: Grid */
+            --section-padding: 140px;     /* Pillar 2: White Space */
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* RESET & BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--canvas-white); 
+            color: var(--text-main);
+            line-height: 1.7; /* Pillar 2: Readability */
+        }
+
+        h1, h2, h3, .h-style { 
+            font-family: 'Montserrat', sans-serif; 
+            color: var(--logistics-charcoal);
+            text-transform: none;
+        }
+
+        /* PILLAR 1 & 2: LAYOUT & SPACE */
+        .container { 
+            max-width: var(--max-width); 
+            margin: 0 auto; 
+            padding: 0 24px; 
+        }
+
+        .section-padding { padding: var(--section-padding) 0; }
+
+        /* BUTTONS: COMPONENT DIRECTIVES */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 42px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background-color: var(--haul-alot-red);
+            color: var(--canvas-white);
+            box-shadow: 0 10px 15px -3px rgba(230, 55, 49, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--deep-vector-red);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px -5px rgba(230, 55, 49, 0.3);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--logistics-charcoal);
+            color: var(--logistics-charcoal);
+        }
+
+        /* NAVIGATION */
+        nav {
+            height: 90px;
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.98);
+            position: fixed;
+            top: 0; width: 100%; z-index: 1000;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo img { height: 45px; }
+
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--logistics-charcoal);
+            font-weight: 600;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+        .nav-links a:hover { color: var(--haul-alot-red); }
+
+        .nav-phone {
+            color: var(--haul-alot-red);
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* HERO SECTION (CAPTURE) */
+        .hero {
+            padding-top: 180px;
+            padding-bottom: 100px;
+            background: var(--canvas-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .seo-tag {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #888;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span { color: var(--haul-alot-red); }
+
+        .hero p {
+            font-size: 19px;
+            color: #555;
+            margin-bottom: 35px;
+            max-width: 540px;
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--logistics-charcoal);
+        }
+
+        .badge i { color: #2ecc71; }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 20px 20px 60px rgba(0,0,0,0.08);
+        }
+
+        /* REVIEWS SECTION */
+        .reviews { background: var(--roadway-grey); padding: 80px 0; }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .review-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--soft-shadow);
+        }
+        .stars { color: #f1c40f; margin-bottom: 15px; font-size: 14px; }
+        .review-text { font-style: italic; margin-bottom: 20px; color: #444; }
+        .reviewer { font-weight: 700; font-family: 'Montserrat', sans-serif; font-size: 15px; }
+
+        /* SERVICES SECTION (DIRECT) */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid #eee;
+            padding: 50px;
+            border-radius: 16px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            border-color: var(--haul-alot-red);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .service-card i {
+            font-size: 40px;
+            color: var(--haul-alot-red);
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 { margin-bottom: 15px; }
+
+        /* LOCATIONS SECTION */
+        .locations { background-color: var(--logistics-charcoal); color: white; }
+        .locations h2, .locations h3 { color: white; }
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: flex-start;
+        }
+        .loc-list { list-style: none; margin-top: 30px; }
+        .loc-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111;
+            color: #999;
+            padding: 80px 0 40px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+        .footer-brand h3 { color: white; margin-bottom: 20px; }
+        .footer-col h4 { color: white; margin-bottom: 20px; font-size: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul li a { color: #999; text-decoration: none; }
+        .footer-bottom {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #222;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* MOBILE MENU BUTTON */
+        .mobile-toggle { display: none; font-size: 24px; cursor: pointer; }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            :root { --section-padding: 100px; }
+            .hero-grid, .location-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero h1 { font-size: 42px; }
+            .hero-grid .hero-image { order: -1; }
+            .hero p { margin: 0 auto 35px; }
+            .trust-badges { justify-content: center; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .nav-btn-wrap { display: none; }
+            .mobile-toggle { display: block; }
+            .services-grid, .reviews-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 34px; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container nav-flex">
+            <a href="#" class="logo">
+                <img src="https://ik.imagekit.io/puuz06/294531033_412134340940518_1953074107431397305_n.png" alt="Haul Alot Logistics Logo">
+            </a>
+            
+            <div class="nav-links">
+                <a href="#services">Freight</a>
+                <a href="#services">Customs</a>
+                <a href="#services">Removals</a>
+                <a href="#about">About</a>
+                <span class="nav-phone">+264 81 602 4863</span>
+            </div>
+
+            <div class="nav-btn-wrap">
+                <a href="#contact" class="btn btn-primary" style="padding: 12px 24px; font-size: 13px;">Free Quote</a>
+            </div>
+
+            <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (CAPTURE) -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="seo-tag">The Best Logistics & Freight Company in Windhoek</span>
+                <h1>Your Freight, <span>Our Priority.</span> Moving Namibia with Precision.</h1>
+                <p>Registered, insured, and trusted by businesses across Namibia. From Walvis Bay to Windhoek, we deliver your cargo on time, every time.</p>
+                
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Get A Free Hauling Quote →</a>
+                </div>
+
+                <div class="trust-badges">
+                    <div class="badge"><i class="fas fa-check-circle"></i> NamRA Compliant</div>
+                    <div class="badge"><i class="fas fa-shield-alt"></i> Fully Insured</div>
+                    <div class="badge"><i class="fas fa-certificate"></i> CC Registered</div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://ik.imagekit.io/puuz06/161261297_240907087744917_2420913666502309587_n.jpg" alt="Haul Alot Logistics Moving Namibia">
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION (PROOF) -->
+    <section class="reviews">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">What Our Clients Say</h2>
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"This is one of the companies you can actually trust, it's legit. I have worked with them more than two times and therefore I won't hesitate to work with them in the future."</p>
+                    <p class="reviewer">— Simon Brakias</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Very Reliable and efficient. Great service delivery, keep it up guys."</p>
+                    <p class="reviewer">— Silume Nghipangelwa Sheya</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Well, they are the best for me in Namibia. Thank you guys for such good service."</p>
+                    <p class="reviewer">— Pomwene "Mwene" Iwata</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES GRID (DIRECT) -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 60px;">
+                <h2 style="font-size: 36px; margin-bottom: 20px;">Comprehensive Logistics Solutions</h2>
+                <p>Professional handling of your assets from the port to your doorstep. We specialize in precision-driven transport.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <i class="fas fa-truck-moving"></i>
+                    <h3>Freight & Long-Haul</h3>
+                    <p>Heavy-duty cargo transport across Namibia and neighboring countries. Local and cross-border solutions tailored to your schedule.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h3>Customs Clearing</h3>
+                    <p>Hassle-free customs clearing at Walvis Bay and major borders. We handle the paperwork so you can focus on your business.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <i class="fas fa-boxes"></i>
+                    <h3>Local Removals</h3>
+                    <p>Expert household and office removals within Windhoek and surrounding areas. Careful packing and secure transport guaranteed.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <i class="fas fa-warehouse"></i>
+                    <h3>Warehousing</h3>
+                    <p>Safe, secure, and organized storage for your goods. Short-term and long-term warehousing options available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION (INTERMISSION) -->
+    <section style="background: var(--roadway-grey); padding: 100px 0;">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 15px;">Reliable. Insured. Professional.</h2>
+                <p>Don't risk your cargo with unverified movers. Partner with Namibia's trusted logistics experts.</p>
+            </div>
+            <a href="#contact" class="btn btn-primary">Start Your Booking →</a>
+        </div>
+    </section>
+
+    <!-- MISSION / VALUES SECTION -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="location-grid">
+                <div>
+                    <img src="https://ik.imagekit.io/puuz06/182796894_277456800756612_3602589417192213418_n.jpg" alt="Haul Alot Fleet" style="width: 100%; border-radius: 20px;">
+                </div>
+                <div>
+                    <span class="seo-tag">Our Mission</span>
+                    <h2 style="margin-bottom: 25px;">The Haul-A-Lot Standard</h2>
+                    <p style="margin-bottom: 20px;">At Haul-A-Lot Logistics, we believe that logistics is about more than just moving boxes. It's about maintaining the heartbeat of Namibia's economy.</p>
+                    
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: var(--haul-alot-red); margin-top: 5px;"></i> <strong>Safety First:</strong> We prioritize the security of your goods above all else.</li>
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: var(--haul-alot-red); margin-top: 5px;"></i> <strong>Punctuality:</strong> Late deliveries cost money. We pride ourselves on meeting every deadline.</li>
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: var(--haul-alot-red); margin-top: 5px;"></i> <strong>Transparency:</strong> Real-time updates and honest communication throughout the trip.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATIONS / SERVICE AREAS -->
+    <section class="section-padding locations">
+        <div class="container">
+            <div class="location-grid">
+                <div>
+                    <span class="seo-tag" style="color: #aaa;">Service Network</span>
+                    <h2>Covering Namibia's Major Trade Routes</h2>
+                    <p style="opacity: 0.8; margin-bottom: 40px;">From our headquarters in Windhoek, we coordinate a nationwide network that ensures no corner of the country is out of reach.</p>
+                    
+                    <div style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                        <h3>📍 Headquarters: Windhoek</h3>
+                        <p style="margin: 10px 0;">Schoeman Street, Windhoek</p>
+                        <p><strong>Phone:</strong> +264 81 602 4863</p>
+                        <p style="margin-top: 15px;"><strong>Operating Hours:</strong><br>Mon-Thu: 08:00 – 17:00<br>Fri: 08:00 – 16:00<br>Sat: 08:00 – 13:00</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Our Service Network</h3>
+                    <ul class="loc-list">
+                        <li><span>Walvis Bay</span> <span>Port Operations</span></li>
+                        <li><span>Swakopmund</span> <span>Regional Distribution</span></li>
+                        <li><span>Oshakati</span> <span>Northern Corridor</span></li>
+                        <li><span>Rundu</span> <span>Eastern Route</span></li>
+                    </ul>
+
+                    <h3 style="margin-top: 50px; margin-bottom: 20px;">Primary Corridors We Serve</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-road" style="color: var(--haul-alot-red); margin-right: 10px;"></i> Trans-Kalahari Corridor</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-road" style="color: var(--haul-alot-red); margin-right: 10px;"></i> Trans-Cunene Corridor</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-road" style="color: var(--haul-alot-red); margin-right: 10px;"></i> Windhoek-Walvis Bay Route</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA (CONVERT) -->
+    <section id="contact" class="section-padding" style="text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 42px; margin-bottom: 20px;">Ready to Move?</h2>
+            <p style="font-size: 20px; max-width: 600px; margin: 0 auto 40px;">Contact us today for a obligation-free quote on your next shipment or removal.</p>
+            
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="tel:+264816024863" class="btn btn-primary" style="background: var(--logistics-charcoal);"><i class="fas fa-phone" style="margin-right: 10px;"></i> Call Us Now</a>
+                <a href="mailto:info@haulalot.com" class="btn btn-primary"><i class="fas fa-envelope" style="margin-right: 10px;"></i> Email For Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Haul-A-Lot Logistics CC</h3>
+                    <p>Your Freight, Our Priority. Moving Namibia with Precision.</p>
+                    <p style="margin-top: 20px; font-weight: 700; color: white;">+264 81 602 4863</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Freight Services</a></li>
+                        <li><a href="#services">Customs Clearing</a></li>
+                        <li><a href="#about">About Our Company</a></li>
+                        <li><a href="#contact">Get a Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li><a href="#">Windhoek</a></li>
+                        <li><a href="#">Walvis Bay</a></li>
+                        <li><a href="#">Oshakati</a></li>
+                        <li><a href="#">Regional Routes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>info@haulalot.com</li>
+                        <li>Schoeman Street, Windhoek</li>
+                        <li>Namibia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Haul-A-Lot Logistics CC. All Rights Reserved. 
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
